@@ -844,6 +844,238 @@
 
 
 
+#multidimentions array / 2D array
+# multidimentions_array=[
+# [1,2,3,4],
+# [5,6,7,8],
+# [9,10,11,12]
+# ]
+# multidimentions_array.each do |row| puts row.join(',') end
+
+
+
+# puts multidimentions_array[0][1] # print 2
+# multidimentions_array.each do  |i| puts "items are #{i}" end 
+
+
+
+# multidimentions_array.each do |row|
+#     row.each do |col|
+#         print col
+#     end
+# end
+
+
+
+# box=[]
+# 10.times do |row|
+#     box[row]=[]
+#     10.times do 
+#         box[row]<<0
+#     end 
+# end
+
+# for row in box
+# puts row.inspect
+
+# end
+
+
+
+#hashes=similar to the array it can hold mixure of data types  in the same hash and hashes contain key-value pairs
+
+#creating hashes
+
+# fruits={
+#     red:"apple",
+#     yellow:"banana",
+#     green:"guava"
+# }
+# puts fruits[:red]
+
+
+
+# fruits=Hash.new
+# fruits[red]="apple"
+# fruits[yellow]="banana"
+# fruits[green]="guava"
+
+
+#another way to create hash
+# fruits=Hash.new
+# fruits.store("red","apple")
+# fruits.store("yellow","banana")
+# fruits.store("green","guava")
+# puts fruits["red"]
+
+
+
+# country={
+#     "in"=>"INDIA",
+#     "us"=>"AMERICA",
+#     "hu"=>"HUNGRY",
+#     "uk"=>"BRITAIN"
+# }
+# country.each do |key,value|
+#     puts "the key is #{key} and the value of keys are #{value}"
+# end
+
+
+# country={
+#     "in"=>"INDIA",
+#     "us"=>"AMERICA",
+#     "hu"=>"HUNGRY",
+#     "uk"=>"BRITAIN"
+# }
+# puts "size of the hash country is #{country.size}" #we can also use length
+# puts "size of the hash country is #{country.inspect}"
+# puts " #{country.keys.inspect}"
+# puts " #{country.values.inspect}"
+
+
+# country.each {|k,v| puts "key :#{k} value:#{v}" }
+# country.each_pair{|k,v| puts "key :#{k} value:#{v}" } #both are work as same
+# country.each_key{|k| puts "key :#{k} " }
+# country.each_value{|v| puts "value :#{v} " }
+
+
+
+# key become value and value become key 
+# country={
+#     "in"=>"INDIA",
+#     "us"=>"AMERICA",
+#     "hu"=>"HUNGRY",
+#     "uk"=>"BRITAIN"
+# }
+
+# newcountry =country.invert
+# puts newcountry.keys.inspect
+# puts newcountry.values.inspect
+
+
+
+# names=Hash.new
+# names["clever"]="jones"
+# names["hot"]="julis"
+# names["funky"]="adam"
+# names["smart"]="john"
+# puts names["hot"] 
+# puts names.fetch("funky") #fetch takes a parameter but it same as the above line
+# puts names.values_at ("clever","hot")  #through this we can access  multiple values
+
+
+
+#check the keys avaibility
+# names=Hash.new
+# names["clever"]="jones"
+# names["hot"]="julis"
+# names["funky"]="adam"
+# names["smart"]="john"
+
+# puts names.has_key?("hot")
+# puts names.key?("hello") #both are work as same
+# puts names.include?("funky")
+
+
+
+
+# for values avaibility
+# names=Hash.new
+# names["clever"]="jones"
+# names["hot"]="julis"
+# names["funky"]="adam"
+# names["smart"]="john"
+# puts names.has_value?("jones")
+# puts names.value?("adam")
+
+
+
+#duplicate the hashes
+# names=Hash.new
+# names["clever"]="jones"
+# names["hot"]="julis"
+# names["funky"]="adam"
+# names["smart"]="john"
+
+# names2=names.dup 
+# puts names2.inspect
+# puts names2.values.inspect
+# puts names.eql?(names2)
+# puts names2.empty?
+# puts names2.clear  #all the keys and values will be delete
+# puts names2.empty? 
+
+
+
+# names2=Hash.new
+# names2["fname"]="kartik"
+# names2["lname"]="patidar"
+# names2["city"]="indore"
+
+# puts names2.delete("city")
+# puts names2.inspect
+
+# puts names2.shift   #shift method delete the first pair in the hash
+# puts names2.inspect
+
+# puts names2.delete_if{|key,value| key=="fname"}
+
+
+
+# names2=Hash.new
+# names2["fname"]="kartik"
+# names2["lname"]="patidar"
+# names2["city"]="indore"
+
+# people=Hash.new
+# people.store("name","naman")
+# people.store("lanme","pal")
+# people.store("country","india")
+# puts people.inspect
+
+# myhash=names2.merge(people) #merge two hash
+# puts myhash.inspect
+
+
+
+#here merge! left hand side become the same and merge! and update function are synonyms
+# names2=Hash.new
+# names2["fname"]="kartik"
+# names2["lname"]="patidar"
+# names2["city"]="indore"
+
+# people=Hash.new
+# people.store("name","naman")
+# people.store("lanme","pal")
+# people.store("country","india")
+
+# myhash=names2.merge!(people)
+# puts myhash.inspect
+# puts names2.inspect
+# puts people.inspect
+
+
+# names2=Hash.new
+# names2["fname"]="kartik"
+# names2["lname"]="patidar"
+# names2["city"]="indore"
+# puts names2.assoc("city")  #it will return key and value pairs 
+# puts names2.rassoc("indore") #it will take parameter as a value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
